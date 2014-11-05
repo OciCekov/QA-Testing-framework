@@ -22,21 +22,25 @@
             startDate = DateTime.Now.AddDays(2)
                 .ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
             endDate = DateTime.Now.AddDays(2)
-                .AddHours(3)
+                .AddMinutes(2)
                 .ToString("dd/MM/yyyy hh:mm:ss", CultureInfo.InvariantCulture);
         }
        
         [TestMethod]
+        [Owner("Oci Cekov")]
+        [Priority(1)]
         public void EntranceExam_CreateNewExam()
         {
-            var page = Pages<NewExamPage>.Instance;
             Pages<LoginPage>.Instance.LoginUser(currentUser);
-            page.Navigate();
-            page.Validator.AssertTitleIsVisible();
-            page.CreateNewExam(startDate, endDate);
+            Pages<NewExamPage>.Instance.Navigate();
+            Pages<NewExamPage>.Instance.Browser.RefreshDomTree();
+            Pages<NewExamPage>.Instance.Validator.AssertTitleIsVisible();
+            Pages<NewExamPage>.Instance.CreateNewExam(startDate, endDate);
         }
 
         [TestMethod]
+        [Owner("Oci Cekov")]
+        [Priority(1)]
         public void EntranceExam_CorrectExamDateIsSet()
         {
             var page = Pages<NewExamPage>.Instance;

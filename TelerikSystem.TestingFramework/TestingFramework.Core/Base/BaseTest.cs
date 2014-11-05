@@ -54,9 +54,9 @@
                 mySettings.Web.KillBrowserProcessOnClose = true;
                 mySettings.DisableDialogMonitoring = true;
                 mySettings.UnexpectedDialogAction = UnexpectedDialogAction.HandleAndContinue;
-                mySettings.Web.ExecutingBrowsers.Add(BrowserExecutionType.Chrome);
-                mySettings.Web.Browser = BrowserExecutionType.Chrome;
-                mySettings.Web.DefaultBrowser = BrowserType.Chrome;
+                mySettings.Web.ExecutingBrowsers.Add(BrowserExecutionType.InternetExplorer);
+                mySettings.Web.Browser = BrowserExecutionType.InternetExplorer;
+                mySettings.Web.DefaultBrowser = BrowserType.InternetExplorer;
                 mySettings.Web.RecycleBrowser = true;
                 mySettings.ExecutionDelay = 100;
                 var manager = new Manager(mySettings);

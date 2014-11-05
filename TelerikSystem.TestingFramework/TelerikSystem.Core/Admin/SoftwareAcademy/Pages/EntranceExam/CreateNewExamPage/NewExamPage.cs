@@ -62,13 +62,13 @@
 
             this.Map.StartTime.MouseClick();
             this.Map.StartTime.Value = "";
-            this.Map.StartTime.OwnerBrowser.Desktop.KeyBoard.TypeText(startTime, 1);
+            this.Map.StartTime.Value = startTime; //.OwnerBrowser.Desktop.KeyBoard.TypeText(startTime, 1);
 
             this.Map.StartTime.OwnerBrowser.Desktop.KeyBoard.KeyPress(Keys.Tab);
             this.Map.EndTime.Value = "";
-            this.Map.EndTime.OwnerBrowser.Desktop.KeyBoard.TypeText(endTime, 1);
+            this.Map.EndTime.Value = endTime;    //.OwnerBrowser.Desktop.KeyBoard.TypeText(endTime, 1);
 
-            this.Map.TrainingRoomOption.Find.AllByTagName<HtmlListItem>("li")[1].Click();
+            this.Map.TrainingRoomOption.Find.AllByTagName<HtmlListItem>("li")[2].Click();
 
             this.Map.StudentsLimit.Text = "37";
             this.Map.StudentsLimit.FireChange();
